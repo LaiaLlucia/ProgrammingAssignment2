@@ -25,7 +25,8 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## This function  calculates the inverse of the special matrix previously created. However, if the mean has already been calculated it gets the mean from the cache and skips the computation. 
+## This function  calculates the inverse of the special matrix previously created. 
+## However, if the inverse has already been calculated it gets the inverse from the cache and skips the computation. 
 
 cacheSolve <- function(x, ...) {
         m <- x$getinverse()
@@ -39,7 +40,7 @@ cacheSolve <- function(x, ...) {
         m
 }
 
-##Testing the functions
+## Testing the functions
 
 Original <- matrix(1:7, nrow = 3, ncol = 3) ## Creating a matrix
 Special <- makeCacheMatrix(Original)
